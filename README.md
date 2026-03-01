@@ -169,8 +169,3 @@ BSCS – Virtual University of Pakistan
 
 ---
 
-If you want, I can now:
-
-* Polish all 3 READMEs into one internship submission document
-* Or create a professional GitHub description + repository naming suggestions
-* Or write a LinkedIn completion post 🚀
