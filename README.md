@@ -1,154 +1,176 @@
-📘 Flutter Development Intern Task – Week 2
-📱 Counter & To-Do App with Local Storage
-📌 Overview
 
-This project focuses on understanding state management and persistent local storage in Flutter.
+
+# 📘 Flutter Development Intern Task – Week 2
+
+## 📱 Counter & To-Do App with Local Storage
+
+---
+
+## 📌 Overview
+
+This project focuses on understanding **state management** and **persistent local storage** in Flutter.
 
 During this week, two mini applications were developed:
 
-Counter App (with persistent storage)
+1. Counter App (with persistent storage)
+2. To-Do List App (with SharedPreferences)
 
-To-Do List App (with SharedPreferences)
+The objective was to learn how to manage state using `setState()` and store data locally using `SharedPreferences`.
 
-The objective was to learn how to manage state using setState() and store data locally using SharedPreferences.
+---
 
-🔢 1️⃣ Counter App
-🎯 Features
+# 🔢 1️⃣ Counter App
 
-Increment counter value
+## 🎯 Features
 
-Display updated count in UI
+* Increment counter value
+* Display updated count in UI
+* Save counter value locally
+* Restore saved value after app restart
 
-Save counter value locally
+## 🧠 Concepts Used
 
-Restore saved value after app restart
+* StatefulWidget
+* setState()
+* Async / Await
+* SharedPreferences
+* initState() lifecycle method
 
-🧠 Concepts Used
+## 💾 Persistence Logic
 
-StatefulWidget
+* Counter value is saved using:
 
-setState()
+  ```
+  sp.setInt("counter", count);
+  ```
 
-Async / Await
+* On app startup:
 
-SharedPreferences
+  ```
+  sp.getInt("counter");
+  ```
 
-initState() lifecycle method
+* The saved value is loaded inside `initState()`.
 
-💾 Persistence Logic
+---
 
-Counter value is saved using:
+# 📝 2️⃣ To-Do List App
 
-sp.setInt("counter", count);
+## 🎯 Features
 
-On app startup:
+* Add new tasks
+* Display tasks using ListView
+* Delete tasks
+* Save tasks locally
+* Restore tasks after restart
 
-sp.getInt("counter");
+## 🧠 Concepts Used
 
-The saved value is loaded inside initState().
+* ListView.builder
+* TextEditingController
+* setState()
+* SharedPreferences
+* Data conversion (String formatting & splitting)
 
-📝 2️⃣ To-Do List App
-🎯 Features
-
-Add new tasks
-
-Display tasks using ListView
-
-Delete tasks
-
-Save tasks locally
-
-Restore tasks after restart
-
-🧠 Concepts Used
-
-ListView.builder
-
-TextEditingController
-
-setState()
-
-SharedPreferences
-
-Data conversion (String formatting & splitting)
-
-💾 Data Storage Approach
+## 💾 Data Storage Approach
 
 Tasks are stored as formatted strings:
 
+```
 Task Title|true
 Task Title|false
+```
 
 Where:
 
-First part → Task title
-
-Second part → Completion status
+* First part → Task title
+* Second part → Completion status
 
 On app start:
 
-Data is loaded
+* Data is loaded
+* String is split using `|`
+* Lists are reconstructed
 
-String is split using |
+---
 
-Lists are reconstructed
+# 🛠 Technologies Used
 
-🛠 Technologies Used
+* Flutter
+* Dart
+* SharedPreferences package
 
-Flutter
+---
 
-Dart
+# 📂 Project Structure
 
-SharedPreferences package
-
-📂 Project Structure
+```
 lib/
  ├── counter.dart
  ├── todo_screen.dart
  └── main.dart
-▶ How to Run
+```
 
-Clone repository:
+---
 
+# ▶ How to Run
+
+1. Clone repository:
+
+```
 git clone <your-repo-link>
+```
 
-Navigate to project:
+2. Navigate to project:
 
+```
 cd project-name
+```
 
-Install dependencies:
+3. Install dependencies:
 
+```
 flutter pub get
+```
 
-Run app:
+4. Run app:
 
+```
 flutter run
-🧠 Learning Outcomes
+```
 
-Understanding StatefulWidget rebuild mechanism
+---
 
-Managing dynamic UI updates
+# 🧠 Learning Outcomes
 
-Working with asynchronous functions
+* Understanding StatefulWidget rebuild mechanism
+* Managing dynamic UI updates
+* Working with asynchronous functions
+* Implementing local persistent storage
+* Understanding Flutter lifecycle (initState)
 
-Implementing local persistent storage
+---
 
-Understanding Flutter lifecycle (initState)
+# 🌟 Future Improvements
 
-🌟 Future Improvements
+* Add task editing feature
+* Add dark mode
+* Use structured data model instead of formatted strings
+* Implement Provider for advanced state management
+* Migrate to Firebase for cloud sync
 
-Add task editing feature
+---
 
-Add dark mode
+# 👨‍💻 Author
 
-Use structured data model instead of formatted strings
-
-Implement Provider for advanced state management
-
-Migrate to Firebase for cloud sync
-
-👨‍💻 Author
-
-Syed Hasnat Ali
+**Syed Hasnat Ali**
 Flutter Development Intern
-BSCS – Virtual University of Pakistan# week-2
+BSCS – Virtual University of Pakistan
+
+---
+
+If you want, I can now:
+
+* Polish all 3 READMEs into one internship submission document
+* Or create a professional GitHub description + repository naming suggestions
+* Or write a LinkedIn completion post 🚀
